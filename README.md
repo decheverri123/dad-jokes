@@ -1,6 +1,6 @@
 Run
 
-### npm start
+`npm start`
 
 in the directory
 
