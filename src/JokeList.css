@@ -5,7 +5,7 @@
 }
 
 .jokelist-sidebar {
-	background: lightpink;
+	background: lightpink !important;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -32,8 +32,7 @@
 
 .jokelist-sidebar img {
 	width: 50%;
-	border-radius: 50%;
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3);
+	padding-bottom: 30px;
 }
 
 .jokelist-jokes {
@@ -50,8 +49,9 @@
 }
 
 .jokelist-getmore {
-	font-size: 1.5rem;
-	width: 50%;
+	font-size: 1rem;
+	min-width: 90px;
+	min-height: 80px;
 	border-radius: 2rem;
 	padding: 1rem 2rem;
 	color: white;

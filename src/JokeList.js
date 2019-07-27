@@ -3,7 +3,7 @@ import axios from 'axios'
 import './JokeList.css'
 import Joke from './Joke';
 import uuid from 'uuid/v4'
-
+import { Button, Paper, Typography } from '@material-ui/core'
 
 export default function JokeList()
 {
@@ -40,7 +40,6 @@ export default function JokeList()
         getJokes();
     }
 
-
     if (loading)
     {
         return (
@@ -51,17 +50,24 @@ export default function JokeList()
         )
     }
 
-
     return (
         <div className='joke-list'>
-
-            <div className="jokelist-sidebar">
+            <Paper className='jokelist-sidebar'>
                 <h1 className="jokelist-title">
-                    <span>Dad</span> Jokes
+                    <Typography variant='h2'>Dad Jokes</Typography>
                 </h1>
-                <img src="https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg" alt="" />
-                <button className="jokelist-getmore" onClick={handleVotes}>New Jokes</button>
-            </div>
+                <img
+                    src="https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg" alt="" />
+                <Button
+                    className='jokelist-getmore'
+                    variant='contained'
+                    color='primary'
+                    onSubmit={getJokes}
+                >
+                    New Jokes
+                </Button>
+            </Paper>
+
 
             <div className="jokelist-jokes">
                 {jokeVote.map(j =>
