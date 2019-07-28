@@ -54,7 +54,7 @@ export default function JokeList()
         <div className='joke-list'>
             <Paper className='jokelist-sidebar'>
                 <h1 className="jokelist-title">
-                    <Typography variant='h2'>Dad Jokes</Typography>
+                    <Typography variant='h2' style={{ fontFamily: 'Rubik' }}> <b>Dad</b> Jokes </Typography>
                 </h1>
                 <img
                     src="https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg" alt="" />
@@ -62,19 +62,19 @@ export default function JokeList()
                     className='jokelist-getmore'
                     variant='contained'
                     color='primary'
-                    onSubmit={getJokes}
+                    onClick={handleVotes}
                 >
                     New Jokes
                 </Button>
             </Paper>
 
 
-            <div className="jokelist-jokes">
+            <Paper className="jokelist-jokes">
                 {jokeVote.map(j =>
                     (
                         <Joke key={j.id} text={j.text} />
                     ))}
-            </div>
+            </Paper>
 
         </div >
     )

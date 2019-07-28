@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import './Joke.css'
+import { List, Divider, Button, ListItem, ListItemText, ListItemIcon } from '@material-ui/core';
 
 export default function Joke(props)
 {
@@ -20,14 +21,17 @@ export default function Joke(props)
 
 
     return (
-        <div className='joke'>
-            <div className="joke-buttons">
+        <List className='joke'>
+            <ListItemIcon style={{ paddingLeft: '20px' }}>
                 <i className="fas fa-arrow-up" onClick={() => setVote(vote + 1)} />
                 <span className='joke-votes' style={{ borderColor: getColor() }}>{vote}</span>
                 <i className="fas fa-arrow-down" onClick={() => setVote(vote - 1)} />
-            </div>
-            <div className="joke-text">{props.text}</div>
+            </ListItemIcon>
 
-        </div >
+            <ListItem>
+                <ListItemText primary={props.text} />
+            </ListItem>
+            <Divider variant='inset' component='li' />
+        </List >
     )
 }
