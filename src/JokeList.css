@@ -5,12 +5,12 @@
 }
 
 .jokelist-sidebar {
-	background: lightpink;
+	background: lightpink !important;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 30%;
+	margin: 50;
 	text-align: center;
 	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
 		0 15px 12px rgba(0, 0, 0, 0.3) inset 0 0 25px lightpink;
@@ -23,6 +23,7 @@
 	color: white;
 	font-weight: 300;
 	letter-spacing: 0.6rem;
+	font-family: "Rubik", sans-serif !important;
 }
 
 .jokelist-title span {
@@ -32,8 +33,7 @@
 
 .jokelist-sidebar img {
 	width: 50%;
-	border-radius: 50%;
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3);
+	padding-bottom: 30px;
 }
 
 .jokelist-jokes {
@@ -50,9 +50,10 @@
 }
 
 .jokelist-getmore {
-	font-size: 1.5rem;
+	font-size: 1rem;
+	border-radius: 500px !important;
 	width: 50%;
-	border-radius: 2rem;
+	height: 8%;
 	padding: 1rem 2rem;
 	color: white;
 	font-weight: 700;
